@@ -88,10 +88,42 @@ def main():
 
 
     st.sidebar.header("Some Important Terms: ")
-    # st.sidebar.markdown("
-    # [Polyuria]()
+    st.sidebar.write("""
+     _Click on the terms to know what they mean_
+    - **[POLYURIA](https://www.webmd.com/diabetes/polyuria-too-much-urine#:~:text=If%20you%20have%20a%20condition,a%20classic%20sign%20of%20diabetes.)** 
 
-    # ")
+    - **[POLYDIPSIA](https://www.healthline.com/health/diabetes/polydipsia#:~:text=Polydipsia%20is%20a%20medical%20name,lose%20a%20lot%20of%20fluid.)**
+
+    - **[PARTIAL PARESIS](https://www.healthline.com/health/paresis#:~:text=Paresis%20involves%20the%20weakening%20of,occurs%20when%20nerves%20are%20damaged.)**
+
+    - **[ALOPECIA](https://www.healthline.com/health/alopecia-areata#:~:text=Alopecia%20areata%20is%20a%20condition,follicles%2C%20resulting%20in%20hair%20loss.)**
+
+    - **[SUDDEN WEIGHTLOSS](https://my.clevelandclinic.org/health/diseases/17770-unexplained-weight-loss)**
+        - Weight loss of 10 pounds or more, or five percent of body weight, over a period of 6 to 12 months is considered “unexplained.”
+    """)
+     
+    if st.button("Remedies"):
+        if polyuria == 1:
+            st.write("""
+            - Consult a doctor
+            - Cut Back on alcohol and caffeine
+             """)
+        if polydipsia == 1:
+            st.write("""
+            - Consult a doctor
+            - Form a exercise plan and stick to it
+            - Try to take less stress
+             """)
+        if partial_paresis == 1:
+            st.write("""
+            - Do not panic, consult a doctor
+             """)
+        if alopecia == 1:
+            st.write(""" 
+            - Manage your stress levels by taking a walk everyday.
+            - Consult your doctor
+            - Check twice before taking any medication
+            """)
 
 def prediction(age,polyuria,polydipsia,gender,partial_paresis,weight_loss,irritability,healing,alopecia,itching):
     predicted_output = model_rfc.predict([[age,polyuria,polydipsia,gender,partial_paresis,weight_loss,irritability,healing,alopecia,itching]])
@@ -99,4 +131,4 @@ def prediction(age,polyuria,polydipsia,gender,partial_paresis,weight_loss,irrita
 
 if __name__ == '__main__':
     main()
-#print(model_rfc.predict([[40,0,1,1,0,0,0,1,1,1]]))
+
