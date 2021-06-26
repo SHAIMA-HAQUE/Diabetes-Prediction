@@ -105,21 +105,25 @@ def main():
     if st.button("Remedies"):
         if polyuria == 1:
             st.write("""
+            ** For Polyuria:**
             - Consult a doctor
             - Cut Back on alcohol and caffeine
              """)
         if polydipsia == 1:
             st.write("""
+            ** For Polydipsia:**
             - Consult a doctor
             - Form a exercise plan and stick to it
             - Try to take less stress
              """)
         if partial_paresis == 1:
             st.write("""
+            ** For Partial Paresis: **
             - Do not panic, consult a doctor
              """)
         if alopecia == 1:
             st.write(""" 
+            ** For Alopecia:**
             - Manage your stress levels by taking a walk everyday.
             - Consult your doctor
             - Check twice before taking any medication
