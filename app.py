@@ -8,7 +8,7 @@ with open('model_pickle','rb') as model:
 
 def main():
     html_temp = """ <div style = "background-color :pink;padding:10px">
-    <h1 style = "color:white;text-align:center">Diabetes Prediction</h2>
+    <h1 style = "color:white;text-align:center">Diabetes Predictor</h2>
     </div>
 
     """
